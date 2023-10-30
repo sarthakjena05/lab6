@@ -16,6 +16,7 @@ def menu():
 
 
 on = True
+new_password_encoded = 0
 
 while on == True:
 
@@ -24,8 +25,14 @@ while on == True:
 
     if menu_option == "1":
         password = input("Please enter your password to encode:")
-        encoder(password)
+        enodoed = encoder(password)
 
 
     if menu_option == "3":
         on = False
+
+    if menu_option == "2"
+        if new_password_encoded == 0:
+            print("Invalid")
+        else:
+
