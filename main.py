@@ -1,10 +1,8 @@
 def encoder(password):
-
+    global new_password
     new_digits = [(int(digit) + 3) % 10 for digit in password]
     new_password = "".join(map(str, new_digits))
     return new_password
-
-
 def menu():
     print("Menu")
     print("-------------")
@@ -12,7 +10,11 @@ def menu():
     print("2. Decode")
     print("3. Quit")
 
-
+#Nafiaz Chowdhury
+def decoder(new_password):
+    old_digits = [(int(digit) - 3) % 10 for digit in new_password]
+    old_password = "".join(map(str, old_digits))
+    return old_password
 
 on = True
 new_password_encoded = None
@@ -34,4 +36,6 @@ while on == True:
         if new_password_encoded == 0:
             print("Invalid")
         else:
+            decode = decoder(enodoed)
+            print(f"Encoded Password: {enodoed} Decoded:{decode}")
 
