@@ -1,6 +1,5 @@
 def encoder(password):
 
-
     new_digits = [(int(digit) + 3) % 10 for digit in password]
     new_password = "".join(map(str, new_digits))
     return new_password
@@ -16,7 +15,7 @@ def menu():
 
 
 on = True
-new_password_encoded = 0
+new_password_encoded = None
 
 while on == True:
 
@@ -31,7 +30,7 @@ while on == True:
     if menu_option == "3":
         on = False
 
-    if menu_option == "2"
+    if menu_option == "2":
         if new_password_encoded == 0:
             print("Invalid")
         else:
