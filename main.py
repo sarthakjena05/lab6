@@ -1,5 +1,5 @@
 def encoder(password):
-    global new_password
+
     new_digits = [(int(digit) + 3) % 10 for digit in password]
     new_password = "".join(map(str, new_digits))
     return new_password
@@ -27,6 +27,7 @@ while on == True:
     if menu_option == "1":
         password = input("Please enter your password to encode:")
         enodoed = encoder(password)
+        print("Your password has been encoded and stored")
 
 
     if menu_option == "3":
@@ -37,5 +38,8 @@ while on == True:
             print("Invalid")
         else:
             decode = decoder(enodoed)
-            print(f"Encoded Password: {enodoed} Decoded:{decode}")
+            print(f"The Encoded Password: {enodoed} The Decoded Password:{decode}")
+
+
+
 
