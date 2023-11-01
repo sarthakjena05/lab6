@@ -1,7 +1,8 @@
 def encoder(password):
-
-    new_digits = [(int(digit) + 3) % 10 for digit in password]
-    new_password = "".join(map(str, new_digits))
+    new_password = ""
+    for digit in password:
+        encoded_digit = str((int(digit) + 3) if digit < '7' else str((int(digit) - 7)))
+        new_password += encoded_digit
     return new_password
 def menu():
     print("Menu")
@@ -11,10 +12,7 @@ def menu():
     print("3. Quit")
 
 #Nafiaz Chowdhury
-def decoder(new_password):
-    old_digits = [(int(digit) - 3) % 10 for digit in new_password]
-    old_password = "".join(map(str, old_digits))
-    return old_password
+
 
 on = True
 new_password_encoded = None
