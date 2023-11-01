@@ -12,7 +12,13 @@ def menu():
     print("3. Quit")
 
 #Nafiaz Chowdhury
-
+def decoder(new_password):
+    old_password = ""
+    for digit in new_password:
+        old_digits = str((int(digit)-3)) if digit >= '3' else str((int(digit)+7))
+        old_password += old_digits
+    return old_password
+#End Nafi
 
 on = True
 new_password_encoded = None
